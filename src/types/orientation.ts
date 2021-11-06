@@ -1,17 +1,25 @@
-export interface Orientation2D {
-  /**
-   * Rotation around Y axis
-   */
-  g: number;
+export class Orientation2D {
+  constructor(
+    /**
+     * Rotation around Z axis
+     */
+    public z: number,
+  ) {}
 }
 
-export interface Orientation3D extends Orientation2D {
-  /**
-   * Rotation around Z axios
-   */
-  a: number;
-  /**
-   * Rotation around X axis
-   */
-  b: number;
+export class Orientation3D {
+  constructor(
+    /**
+     * Rotation around X axis
+     */
+    public x: number,
+    /**
+     * Rotation around Y axios
+     */
+    public y: number,
+    /**
+     * Rotation around Z axios
+     */
+     public z: number,
+  ) {}
 }

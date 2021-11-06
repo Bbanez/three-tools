@@ -1,6 +1,6 @@
 import type { Euler, Vector3 } from 'three';
 import type { BoundingBox } from '../models';
-import type { BoxDimensions, Orientation3D, Point3D } from '../types';
+import { BoxDimensions, Orientation3D, Point3D } from '../types';
 
 export class BoundingBoxFactory {
   static instance({
@@ -16,14 +16,16 @@ export class BoundingBoxFactory {
     const b2 = dimensions.d / 2;
     const c2 = dimensions.h / 2;
 
-    const A: Point3D = {
+    const A = new Point3D({
       x: position.x - a2,
       y: position.y - b2,
       z: position.z - c2,
-    };
+    });
 
-    return new BoundingBox([A, {
-      x: position.x + dimensions.w*
-    }], position);
+    const B: Point3D = {
+      x: dimensions.w * Math.cos(orientation)
+    }
+    const initVec = new Point3D({x: dimensions.w, y: dimensions.d, z: dimensions.h});
+    return new BoundingBox({corners: [A], position});
   }
 }

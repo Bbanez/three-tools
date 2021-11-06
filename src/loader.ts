@@ -1,9 +1,13 @@
 import { v4 as uuidv4 } from 'uuid';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
-import type { GLTF } from 'three/examples/jsm/loaders/GLTFLoader';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import type { Group, Texture, CubeTexture } from 'three';
-import { CubeTextureLoader, TextureLoader } from 'three';
+import { GLTF, GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import {
+  CubeTextureLoader,
+  TextureLoader,
+  Group,
+  Texture,
+  CubeTexture,
+} from 'three';
 import type {
   LoaderCallback,
   LoaderItem,
