@@ -1,0 +1,59 @@
+{
+  "name": "@banez/three-tools",
+  "version": "1.0.0",
+  "description": "Tool set for Three.js",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "build:lib": "tsc -p .",
+    "bundle": "node tools.js --bundle",
+    "publish": "node tools.js --publish",
+    "link": "node tools.js --link",
+    "link:sudo": "node tools.js --link --sudo",
+    "unlink": "node tools.js --unlink",
+    "unlink:sudo": "node tools.js --unlink --sudo",
+    "pack": "node tools.js --pack",
+    "test": "env-cmd mocha -r ts-node/register test/integration/*.test.ts --recursive --exit",
+    "test:active": "env-cmd mocha -r ts-node/register test/integration/*.active.test.ts --recursive --exit --bail",
+    "test:unit": "env-cmd mocha -r ts-node/register test/unit/*.test.ts --recursive --exit",
+    "test:active:unit": "env-cmd mocha -r ts-node/register test/unit/*.active.test.ts --recursive --exit",
+    "lint": "eslint . --ext .ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bbanez/three-tools.git"
+  },
+  "keywords": [],
+  "author": "Branislav Vajagić",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bbanez/three-tools/issues"
+  },
+  "homepage": "https://github.com/Bbanez/three-tools",
+  "peerDependencies": {
+    "three": ">=0.134.0",
+    "uuid": ">=8.3.2",
+    "axios": ">=0.24.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.14",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^15.6.2",
+    "@types/three": "^0.133.1",
+    "@types/uuid": "^8.3.1",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "axios": "^0.24.0",
+    "chai": "^4.3.4",
+    "env-cmd": "^10.1.0",
+    "eslint": "^7.9.0",
+    "fs-extra": "^10.0.0",
+    "mocha": "^8.4.0",
+    "prettier": "^2.2.1",
+    "three": "^0.134.0",
+    "ts-node": "^8.10.2",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^4.4.4",
+    "uuid": "^8.3.2"
+  }
+}
